@@ -1,3 +1,7 @@
+server:
+  port: 8080
+  shutdown: graceful
+
 spring:
   h2:
     console:
@@ -15,8 +19,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: ${MAIL_USERNAME}
-    password: ${MAIL_APPLICATION_PASSWORD}
+    username: g1063114
+    password: zlte jggz utac wzdz
     properties:
       mail:
         smtp:
@@ -26,7 +30,18 @@ spring:
             enable: true
 
 springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
   swagger-ui:
-    path: /swagger-ui.html
+    enabled: true
+    disable-swagger-default-url: true
+    display-request-duration: true
+    groups-order: DESC
+    operations-sorter: method
+  version: 0.0.1
+  app-url: http://localhost:${server.port}
+  app-description: Development URL
+  app-title: Test Code
 
 
